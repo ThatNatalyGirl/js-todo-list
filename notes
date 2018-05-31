@@ -1,0 +1,54 @@
+For the HW
+
+we want things as loosely coupled as possible
+
+The to-do list items don't know about each other or that they are even in lists
+it knows what the text is and when it's done
+
+js comment block
+
+How to seperate it out - *TODO ITEM*
+-Each item has a set of things to do to itself
+	- string, done button
+	- what does it need to know
+		-inner html (text)
+		-if it's done (boolean) when we toggle the done button it should change the boolean true and false 
+	- There's also the dom manipulation of it
+		-li
+			-p
+				-button	
+
+OUTSIDE OF THAT
+	- Whole list
+	- input field
+		-type in there and they click enter
+			- an item gets created using the string (DOM)
+	- Items themselves
+		- items is an array of todo items
+	- Current items counter and how many are done counter
+		- check how many items are in the array
+
+SO
+
+TodoList will be a class
+and 
+TodoItem will be a class
+
+
+
+User clicks the DOM button
+	THEN
+	-the boolean changes states
+	-it needs to change the class so that other ppl can use it but we don't want it to just be used and stuff
+		- we are going to dispatch an event. We can have the dom item just say out loud "HEY something changed."
+
+		- then we'll have the todoList listening out for that should said and be ready to do something with it
+
+		- the item needs to just output communication and not have anything dependent on it. 
+
+then we'll have an update view and it's going to have logic to rearrange from the top down
+
+See Picture on phone		
+
+FOR WEEK ONE write all the todo item stuff
+create elements for that to be able to show up and append it
